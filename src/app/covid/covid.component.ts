@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { time } from 'console';
 import { OpenCovidService } from '../open-covid.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class CovidComponent implements OnInit {
 
   public covidSearchForm: FormGroup;
   public covidData: any;
+  public covidDataTest: any;
   constructor(
     private formBuilder: FormBuilder,
     private openCovidService: OpenCovidService
@@ -26,10 +28,17 @@ export class CovidComponent implements OnInit {
       this.openCovidService
         .getCovid(this.covidSearchForm.value.country,this.covidSearchForm.value.date)
         .subscribe((data :any) => this.covidData = data)
-      console.log(this.covidData);
-      console.log(this.covidData.value.country);
+      if (this.covidData[0].provinces[0].confirmed == undefined){
+        console.log("TEST")
+        this.openCovidService
+        .getDefaultCovid("pl")
+        .subscribe((data :any) => this.covidDataTest = data)
+      }
+      console.log(this.covidDataTest)
     }
   }
+
+
   ngOnInit(): void {
   }
 }
