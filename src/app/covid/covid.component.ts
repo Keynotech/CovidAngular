@@ -27,6 +27,7 @@ export class CovidComponent implements OnInit {
         .getCovid(this.covidSearchForm.value.country,this.covidSearchForm.value.date)
         .subscribe((data :any) => this.covidData = data)
       console.log(this.covidData);
+      console.log(this.covidData.value.country);
     }
   }
   ngOnInit(): void {
