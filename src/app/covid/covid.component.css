@@ -1,0 +1,18 @@
+.btn-circle.btn-md {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.stats1{
+  font-size: 24px;
+  padding: 6px;
+}
+
+.stats2{
+  font-size: 24px;
+}
