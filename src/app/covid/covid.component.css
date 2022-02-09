@@ -17,3 +17,11 @@
   font-size: 24px;
 }
 
+.navbar{
+  justify-content: center;
+}
+
+.navbar-brand{
+  font-size:18px;
+  font-weight: bold;
+}

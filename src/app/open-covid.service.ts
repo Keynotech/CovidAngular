@@ -28,4 +28,15 @@ export class OpenCovidService {
 	 }
   });
  }
+ getDefaultCovid(location: any): Observable<any> {
+
+  console.log("code ->", location)
+  return this.http.get(`https://covid-19-data.p.rapidapi.com/country/code?code=${location}`, {
+   headers: {
+		"x-rapidapi-host": API_HOST,
+		"x-rapidapi-key": API_KEY
+	 }
+  });
+
+ }
 }

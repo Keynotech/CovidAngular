@@ -1,8 +1,9 @@
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar mx-auto navbar-dark bg-dark">
+    <div>
   <a class="navbar-brand" href="#">
-    <img src="logo" width="30" height="30" class="d-inline-block align-center" alt="">
+    <img src="https://i.imgur.com/GLgT5qT.png" height="40" width="40" lass="d-inline-block align-center" />
     COVID STATS
-  </a>
+  </a></div>
 </nav>
 <!-- section title -->
 <!-- section city name -->
@@ -26,28 +27,28 @@
     </div>
     <div class="container p-5">
       <div class="text-center p-5">
-        Statystyki Covid dla XXX
+        Statystyki Covid dla {{covidData[0].country}}
       </div>
       <div class="row">
         <div class="col-sm text-center">
           <button type="button" class="btn btn-warning btn-circle btn-md">+</button>
           <p class="stats1 text-center">Potwierdzone</p>
-          <p class="stats2 text-center">0000000</p>
+          <p class="stats2 text-center">{{covidData[0].provinces[0].confirmed}}</p>
         </div>
         <div class="col-sm  text-center">
           <button type="button" class="btn btn-success btn-circle btn-md">z</button>
           <p class="stats1 text-center">Wyleczone</p>
-          <p class="stats2 text-center">0000000</p>
+          <p class="stats2 text-center">{{covidData[0].provinces[0].recovered}}</p>
         </div>
         <div class="col-sm text-center">
           <button type="button" class="btn btn-danger btn-circle btn-md">r</button>
           <p class="stats1 text-center">Krytyczne</p>
-          <p class="stats2 text-center">0000000</p>
+          <p class="stats2 text-center">{{covidData[0].provinces[0].deaths}}</p>
         </div>
         <div class="col-sm text-center">
           <button type="button" class="btn btn-dark btn-circle btn-md">b</button>
           <p class="stats1 text-center">Śmierci</p>
-          <p class="stats2 text-center">0000000</p>
+          <p class="stats2 text-center">{{covidData[0].provinces[0].active}}</p>
         </div>
       </div>
       <div class="container min-vh-100">
@@ -69,6 +70,7 @@
     © 2022 Copyright:
     Radosław Czerwiec and
     Dawid Bloch
+    <img src="https://i.imgur.com/GLgT5qT.png" height="40" width="40" lass="d-inline-block align-center" />
   </div>
   <!-- Copyright -->
 </footer>
