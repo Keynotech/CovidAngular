@@ -14,16 +14,17 @@ export class CovidComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private openCovidService: OpenCovidService
-  ) 
+  )
   {
     this.covidSearchForm = this.formBuilder.group({
-      city: ['', Validators.required]
+      country: ['', Validators.required],
+      date: ['', Validators.required]
     });
   }
   checkCovid(): void {
     if (this.covidSearchForm.valid) {
       this.openCovidService
-        .getCovid(this.covidSearchForm.value.city)
+        .getCovid(this.covidSearchForm.value.country,this.covidSearchForm.value.date)
         .subscribe((data :any) => this.covidData = data)
       console.log(this.covidData);
     }
