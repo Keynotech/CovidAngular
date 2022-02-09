@@ -28,8 +28,6 @@ export class CovidComponent implements OnInit {
       this.openCovidService
         .getCovid(this.covidSearchForm.value.country,this.covidSearchForm.value.date)
         .subscribe((data :any) => this.covidData = data)
-
-
       if (this.covidData[0].provinces[0].confirmed == undefined){
         console.log("TEST")
         this.openCovidService
