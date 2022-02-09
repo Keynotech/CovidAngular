@@ -28,14 +28,16 @@ export class OpenCovidService {
 	 }
   });
  }
- getDefaultCovid(location: any): Observable<any> {
+ getDefaultCovid(location: any, date:any): Observable<any> {
 
-  console.log("code ->", location)
-  return this.http.get(`https://covid-19-data.p.rapidapi.com/country/code?code=${location}`, {
-   headers: {
-		"x-rapidapi-host": API_HOST,
-		"x-rapidapi-key": API_KEY
-	 }
+  return this.http.get(`https://webhooks.mongodb-stitch.com/api/client/v2.0/app/covid-19-qppza/service/REST-API/incoming_webhook/global?country=${location}&min_date=${date}T00:00:00.000Z&max_date=${date}T00:00:00.000Z&hide_fields=_id,%20country,%20country_code,%20country_iso2,%20country_iso3,%20loc,%20state%27`, {
+  });
+
+ }
+
+ getCountryInformation(location: any): Observable<any> {
+
+  return this.http.get(`https://restcountries.com/v3.1/name/${location}`, {
   });
 
  }

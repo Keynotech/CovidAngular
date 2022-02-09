@@ -1,9 +1,9 @@
 <nav class="navbar mx-auto navbar-dark bg-dark">
-    <div>
-  <a class="navbar-brand" href="#">
-    <img src="https://i.imgur.com/GLgT5qT.png" height="40" width="40" lass="d-inline-block align-center" />
-    COVID STATS
-  </a></div>
+  <div>
+    <a class="navbar-brand" href="#">
+      <img src="https://i.imgur.com/GLgT5qT.png" height="40" width="40" lass="d-inline-block align-center" />
+      COVID STATS
+    </a></div>
 </nav>
 <!-- section title -->
 <!-- section city name -->
@@ -13,47 +13,64 @@
       <form [formGroup]="covidSearchForm" (ngSubmit)="checkCovid()">
         <div class="form-group ">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Państwo" formControlName="country">
+            <input type="text" class="form-control" placeholder="Enter Country" formControlName="country">
 
-            <input type="date" class="form-control" value="2022-02-09" formControlName="date">
+            <input type="date" class="form-control" value="2020-04-04" formControlName="date">
 
             <div class="input-group-append">
-              <button id="check-weather" class="btn btn-primary" type="submit">Sprawdź</button>
+              <button id="check-weather" class="btn btn-primary" type="submit">Check</button>
             </div>
-
           </div>
         </div>
       </form>
     </div>
     <div class="container p-5">
-      <div class="text-center p-5">
-        Statystyki Covid dla {{covidData[0].country}}
+      <div class="stats3 text-center p-5">
+        Statistics for {{covidData[0].combined_name}}
       </div>
       <div class="row">
         <div class="col-sm text-center">
-          <button type="button" class="btn btn-warning btn-circle btn-md">+</button>
-          <p class="stats1 text-center">Potwierdzone</p>
-          <p class="stats2 text-center">{{this.covidData[0].provinces[0].confirmed}}</p>
+          <button type="button" class="btn btn-danger btn-circle btn-md"><svg xmlns="http://www.w3.org/2000/svg"
+              width="30" height="30" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+              <path
+                d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+            </svg></button>
+          <p class="stats1 text-center">Infections</p>
+          <p class="stats2 text-center">{{covidData[0].confirmed}}</p>
+        </div>
+        <div class="col-sm text-center">
+          <button type="button" class="btn btn-warning btn-circle btn-md"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"/>
+          </svg></button>
+          <p class="stats1 text-center">Infections Daily</p>
+          <p class="stats2 text-center">{{covidData[0].confirmed_daily}}</p>
+
         </div>
         <div class="col-sm  text-center">
-          <button type="button" class="btn btn-success btn-circle btn-md">z</button>
-          <p class="stats1 text-center">Wyleczone</p>
-          <p class="stats2 text-center">{{this.covidData[0].provinces[0].active}}</p>
+          <button type="button" class="btn btn-success btn-circle btn-md"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-hospital-fill" viewBox="0 0 16 16">
+            <path d="M6 0a1 1 0 0 0-1 1v1a1 1 0 0 0-1 1v4H1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h6v-2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5V16h6a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1h-3V3a1 1 0 0 0-1-1V1a1 1 0 0 0-1-1H6Zm2.5 5.034v1.1l.953-.55.5.867L9 7l.953.55-.5.866-.953-.55v1.1h-1v-1.1l-.953.55-.5-.866L7 7l-.953-.55.5-.866.953.55v-1.1h1ZM2.25 9h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 9.75v-.5A.25.25 0 0 1 2.25 9Zm0 2h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5a.25.25 0 0 1 .25-.25ZM2 13.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5ZM13.25 9h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5a.25.25 0 0 1 .25-.25ZM13 11.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm.25 1.75h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5a.25.25 0 0 1 .25-.25Z"/>
+          </svg></button>
+          <p class="stats1 text-center">Deaths</p>
+          <p class="stats2 text-center">{{covidData[0].deaths}}</p>
         </div>
         <div class="col-sm text-center">
-          <button type="button" class="btn btn-danger btn-circle btn-md">r</button>
-          <p class="stats1 text-center">Krytyczne</p>
-          <p class="stats2 text-center">{{this.covidData[0].provinces[0].deaths}}</p>
-        </div>
-        <div class="col-sm text-center">
-          <button type="button" class="btn btn-dark btn-circle btn-md">b</button>
-          <p class="stats1 text-center">Śmierci</p>
-          <p class="stats2 text-center">{{this.covidData[0].provinces[0].recovered}}</p>
+          <button type="button" class="btn btn-dark btn-circle btn-md"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-emoji-dizzy-fill" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM4.146 5.146a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 1 1 .708.708l-.647.646.647.646a.5.5 0 1 1-.708.708L5.5 7.207l-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708zm5 0a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708zM8 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+          </svg></button>
+          <p class="stats1 text-center">Deaths Daily</p>
+          <p class="stats2 text-center">{{covidData[0].deaths_daily}}</p>
         </div>
       </div>
       <div class="container min-vh-100">
         <div class="text-center p-4">
-        Zawartość jakaś
+          <a class="navbar-brand" href="https://en.wikipedia.org/wiki/{{covidData[0].combined_name}}">
+            <img src="{{this.countryData[0].flags.png}}" lass="d-inline-block align-center" />
+          </a><br>
+          <div class = "information text-center p-4">
+          {{covidData[0].combined_name}} is a country with a total population of {{covidData[0].population}}.<br>
+          On {{this.covidSearchForm.value.date}} the total number of daily infections was {{covidData[0].confirmed_daily}}, the number of deaths increased by {{covidData[0].deaths_daily}}<br>
+          The capital of this country is {{this.countryData[0].capital}}.
+        </div>
         </div>
 
 

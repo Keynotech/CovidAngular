@@ -11,10 +11,17 @@
 .stats1{
   font-size: 24px;
   padding: 6px;
+  font-weight: bold;
 }
 
 .stats2{
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.stats3{
+  font-size: 48px;
+  font-weight: bold;
 }
 
 .navbar{
@@ -24,4 +31,9 @@
 .navbar-brand{
   font-size:18px;
   font-weight: bold;
+}
+
+.information{
+  font-size: 20px;
+  padding: 6px;
 }
