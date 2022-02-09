@@ -17,8 +17,8 @@ export class OpenCovidService {
  private http: HttpClient
  ) { }
 
- getCovid(location: any): Observable<any> {
- return this.http.get(`https://covid-19-data.p.rapidapi.com/country/code?code=${location}`, {
+ getCovid(location: any, date:any): Observable<any> {
+  return this.http.get('https://covid-19-data.p.rapidapi.com/country/name?name=${location}&date=${date}', {
    headers: {
 		"x-rapidapi-host": API_HOST,
 		"x-rapidapi-key": API_KEY

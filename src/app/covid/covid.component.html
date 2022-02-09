@@ -9,13 +9,13 @@
 <div class="w-100 p-3" style="background-color: #eee;">
   <div class="p-3 mb-2 bg-secondary text-white">
     <div class="col-sm-*">
-      <form>
+      <form [formGroup]="covidSearchForm" (ngSubmit)="checkCovid()">
         <div class="form-group ">
           <div class="input-group">
 
-            <input type="text" class="form-control" placeholder="Miasto" formControlName="city">
+            <input type="text" class="form-control" placeholder="Państwo" formControlName="country">
 
-            <input type="date" class="form-control" value="2022-02-09">
+            <input type="date" class="form-control" value="2022-02-09" formControlName="date">
 
             <div class="input-group-append">
               <button id="check-weather" class="btn btn-primary" type="submit">Sprawdź</button>
