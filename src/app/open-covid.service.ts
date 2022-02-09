@@ -17,7 +17,7 @@ export class OpenCovidService {
  private http: HttpClient
  ) { }
 
- getCovid(location: any, date:any): Observable<any> {
+ getCovid(location: any, date:any): Observable<object> {
   console.log("data ->",date)
   console.log("location ->",location)
 

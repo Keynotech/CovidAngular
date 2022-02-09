@@ -32,22 +32,22 @@
         <div class="col-sm text-center">
           <button type="button" class="btn btn-warning btn-circle btn-md">+</button>
           <p class="stats1 text-center">Potwierdzone</p>
-          <p class="stats2 text-center">0000000</p>
+          <p class="stats2 text-center">{{this.covidData[0].provinces[0].confirmed}}</p>
         </div>
         <div class="col-sm  text-center">
           <button type="button" class="btn btn-success btn-circle btn-md">z</button>
           <p class="stats1 text-center">Wyleczone</p>
-          <p class="stats2 text-center">0000000</p>
+          <p class="stats2 text-center">{{this.covidData[0].provinces[0].active}}</p>
         </div>
         <div class="col-sm text-center">
           <button type="button" class="btn btn-danger btn-circle btn-md">r</button>
           <p class="stats1 text-center">Krytyczne</p>
-          <p class="stats2 text-center">0000000</p>
+          <p class="stats2 text-center">{{this.covidData[0].provinces[0].deaths}}</p>
         </div>
         <div class="col-sm text-center">
           <button type="button" class="btn btn-dark btn-circle btn-md">b</button>
           <p class="stats1 text-center">Śmierci</p>
-          <p class="stats2 text-center">0000000</p>
+          <p class="stats2 text-center">{{this.covidData[0].provinces[0].recovered}}</p>
         </div>
       </div>
       <div class="container min-vh-100">
