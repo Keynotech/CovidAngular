@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { OpenCovidService } from '../open-covid.service';
+
 @Component({
   selector: 'app-covid',
   templateUrl: './covid.component.html',
   styleUrls: ['./covid.component.css']
 })
 export class CovidComponent implements OnInit {
+
   public covidSearchForm: FormGroup;
   public covidData: any;
   constructor(
@@ -29,3 +31,4 @@ export class CovidComponent implements OnInit {
   ngOnInit(): void {
   }
 }
+

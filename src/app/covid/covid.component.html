@@ -1,35 +1,75 @@
-<div class="container">
-    <!-- section title -->
-    <div class="row mt-3">
-    <div class="col-12 text-center">
-    <h1>Aplikacja pogodowa</h1>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="logo" width="30" height="30" class="d-inline-block align-center" alt="">
+    COVID STATS
+  </a>
+</nav>
+<!-- section title -->
+<!-- section city name -->
+<div class="w-100 p-3" style="background-color: #eee;">
+  <div class="p-3 mb-2 bg-secondary text-white">
+    <div class="col-sm-*">
+      <form>
+        <div class="form-group ">
+          <div class="input-group">
+
+            <input type="text" class="form-control" placeholder="Miasto" formControlName="city">
+
+            <input type="date" class="form-control" value="2022-02-09">
+
+            <div class="input-group-append">
+              <button id="check-weather" class="btn btn-primary" type="submit">Sprawdź</button>
+            </div>
+
+          </div>
+        </div>
+      </form>
     </div>
+    <div class="container p-5">
+      <div class="text-center p-5">
+        Statystyki Covid dla XXX
+      </div>
+      <div class="row">
+        <div class="col-sm text-center">
+          <button type="button" class="btn btn-warning btn-circle btn-md">+</button>
+          <p class="stats1 text-center">Potwierdzone</p>
+          <p class="stats2 text-center">0000000</p>
+        </div>
+        <div class="col-sm  text-center">
+          <button type="button" class="btn btn-success btn-circle btn-md">z</button>
+          <p class="stats1 text-center">Wyleczone</p>
+          <p class="stats2 text-center">0000000</p>
+        </div>
+        <div class="col-sm text-center">
+          <button type="button" class="btn btn-danger btn-circle btn-md">r</button>
+          <p class="stats1 text-center">Krytyczne</p>
+          <p class="stats2 text-center">0000000</p>
+        </div>
+        <div class="col-sm text-center">
+          <button type="button" class="btn btn-dark btn-circle btn-md">b</button>
+          <p class="stats1 text-center">Śmierci</p>
+          <p class="stats2 text-center">0000000</p>
+        </div>
+      </div>
+      <div class="container min-vh-100">
+        <div class="text-center p-4">
+        Zawartość jakaś
+        </div>
+
+
+      </div>
     </div>
-    <!-- section city name -->
-    <div class="row mt-3">
-    <div class="col-12">
-    <form [formGroup]="covidSearchForm" (ngSubmit)="checkCovid()">
-    <div class="form-group">
-    <div class="input-group">
-    <input type="text" class="form-control"
-    placeholder="Proszę wprowadzić nazwę miasta..."
-    formControlName="city">
-    <div class="input-group-append">
-    <button id="check-covid" class="btn btn-primary"
-   type="submit">Sprawdź pogodę</button>
-    </div>
-    </div>
-    </div>
-    </form>
-    </div>
-    </div>
-    <div class="row mt-3">
-    <div class="col-12">
-       <h3 class="text-center mb-4">Bieżące warunki pogodowe</h3>
-      <p class="text-center">Temperatura: {{covidData?.main?.temp}} °C</p>
-      <p class="text-center">Temperatura odczuwalna: {{covidData?.main?.feels_like}} °C</p>
-      <p class="text-center">Wilgotność: {{covidData?.main?.humidity}} %</p>
-      <p class="text-center">Ciśnienie: {{covidData?.main?.pressure}} hPa</p>
-    </div>
-    </div>
-   </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-center text-white">
+
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    Radosław Czerwiec and
+    Dawid Bloch
+  </div>
+  <!-- Copyright -->
+</footer>
