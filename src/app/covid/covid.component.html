@@ -1,0 +1,35 @@
+<div class="container">
+    <!-- section title -->
+    <div class="row mt-3">
+    <div class="col-12 text-center">
+    <h1>Aplikacja pogodowa</h1>
+    </div>
+    </div>
+    <!-- section city name -->
+    <div class="row mt-3">
+    <div class="col-12">
+    <form [formGroup]="covidSearchForm" (ngSubmit)="checkCovid()">
+    <div class="form-group">
+    <div class="input-group">
+    <input type="text" class="form-control"
+    placeholder="Proszę wprowadzić nazwę miasta..."
+    formControlName="city">
+    <div class="input-group-append">
+    <button id="check-covid" class="btn btn-primary"
+   type="submit">Sprawdź pogodę</button>
+    </div>
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    <div class="row mt-3">
+    <div class="col-12">
+       <h3 class="text-center mb-4">Bieżące warunki pogodowe</h3>
+      <p class="text-center">Temperatura: {{covidData?.main?.temp}} °C</p>
+      <p class="text-center">Temperatura odczuwalna: {{covidData?.main?.feels_like}} °C</p>
+      <p class="text-center">Wilgotność: {{covidData?.main?.humidity}} %</p>
+      <p class="text-center">Ciśnienie: {{covidData?.main?.pressure}} hPa</p>
+    </div>
+    </div>
+   </div>
