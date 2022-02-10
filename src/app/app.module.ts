@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CovidChildComponent } from './covid-child/covid-child.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';//komunikacja z api
+
 @NgModule({
  declarations: [
  AppComponent,

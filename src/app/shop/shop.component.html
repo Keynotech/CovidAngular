@@ -1,5 +1,17 @@
 <app-nav></app-nav>
-<html><p>shop works!</p></html>
+  <h2>Lista produktów</h2>
+<div *ngFor="let product of products">
+ <h3>
+ <a [title]="product.name + ' details'">
+ {{ product.name }}
+ </a>
+ </h3>
+ <p *ngIf="product.description">
+ Opis: {{ product.description }} <br>
+ <img src="{{product.img}}" height="150" width="150" lass="d-inline-block align-left" />
+ </p>
+ <button (click)="share()">
+ Podziel się
+ </button>
+</div>
 <app-footer></app-footer>
-
-
