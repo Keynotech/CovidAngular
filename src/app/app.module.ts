@@ -6,7 +6,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms'; //obsluga formularzy
 import {OpenCovidService} from './open-covid.service';
 import { ShopComponent } from './shop/shop.component';
-import { AppRoutingModule } from './app-routing.module';//komunikacja z api
+import { AppRoutingModule } from './app-routing.module';
+
 @NgModule({
  declarations: [
  AppComponent,

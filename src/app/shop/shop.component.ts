@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { products } from './products';
 
 @Component({
   selector: 'app-shop',
@@ -7,7 +8,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements OnInit {
-
+  
   constructor(
     private router:Router
   ) { }
@@ -16,8 +17,14 @@ export class ShopComponent implements OnInit {
     this.router.navigate(['${pageName']);
   }
   
-
+  
   ngOnInit(): void {
+  }
+  products = products;
+ share() {
+ window.alert('Produkt został udostępniony!');
   }
 
 }
+
+
