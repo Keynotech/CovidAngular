@@ -13,6 +13,10 @@ export class CovidComponent implements OnInit {
   public covidSearchForm: FormGroup;
   public covidData: any;
   public countryData: any;
+  public totalCovidData: any;
+  myDate = new Date();
+  public foundData = false;
+
   constructor(
     private formBuilder: FormBuilder,
     private openCovidService: OpenCovidService,
@@ -34,7 +38,7 @@ export class CovidComponent implements OnInit {
         .getCountryInformation(this.covidSearchForm.value.country)
         .subscribe((data :any) => this.countryData = data)
         console.log(this.countryData[0])
-
+        this.foundData = true;
     }
   }
 
@@ -45,6 +49,11 @@ export class CovidComponent implements OnInit {
 
 
   ngOnInit(): void {
-  }
+      this.openCovidService
+        .getTotalsCovid()
+        .subscribe((data :any) => this.totalCovidData = data)
+        console.log(this.totalCovidData)
+
+}
 }
 
