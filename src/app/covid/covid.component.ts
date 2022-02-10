@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { OpenCovidService } from '../open-covid.service';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-covid',
@@ -14,7 +15,8 @@ export class CovidComponent implements OnInit {
   public countryData: any;
   constructor(
     private formBuilder: FormBuilder,
-    private openCovidService: OpenCovidService
+    private openCovidService: OpenCovidService,
+    private router:Router
   )
   {
     this.covidSearchForm = this.formBuilder.group({
@@ -35,6 +37,11 @@ export class CovidComponent implements OnInit {
 
     }
   }
+
+  goToPage(pageName:string):void{
+    this.router.navigate([`${pageName}`]);
+  }
+  
 
 
   ngOnInit(): void {
