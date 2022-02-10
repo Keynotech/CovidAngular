@@ -1,17 +1,3 @@
-<nav class="navbar mx-auto navbar-dark bg-dark">
-  <div>
-    <a class="navbar-brand" href="#">
-      <img src="https://i.imgur.com/GLgT5qT.png" height="40" width="40" lass="d-inline-block align-center" />
-      COVID STATS
-    </a></div>
-    <div class="content" role="main">
-      <button (click)="goToPage('shop')" id="shop" class="btn btn-primary">Shop</button>
-    </div>
-</nav>
-
-<!-- section title -->
-<!-- section city name -->
-
 <div class="w-100 p-3" style="background-color: #eee;">
   <div class="background p-3 mb-2 bg-secondary text-white">
     <div class="col-sm-*">
@@ -150,6 +136,12 @@
               {{covidData[0].confirmed_daily}}, the number of deaths increased by {{covidData[0].deaths_daily}}<br>
               The capital of this country is {{this.countryData[0].capital}}.
             </div>
+            <div *ngIf="!foundData">
+              Coronavirus disease 2019 (COVID-19) is a contagious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2).
+              The first known case was identified in Wuhan, China, in December 2019.
+              The disease has since spread worldwide, leading to an ongoing pandemic.<br>
+              Symptoms of COVID‑19 are variable, but often include fever, cough, headache, fatigue, breathing difficulties, loss of smell, and loss of taste.
+            </div>
 
           </div>
         </div>
@@ -158,15 +150,3 @@
   </div>
 </div>
 
-<footer class="bg-dark text-center text-white">
-
-
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2022 Copyright:
-    Radosław Czerwiec and
-    Dawid Bloch
-    <img src="https://i.imgur.com/GLgT5qT.png" height="40" width="40" lass="d-inline-block align-center" />
-  </div>
-  <!-- Copyright -->
-</footer>
