@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 const API_URL= "https://covid-19-data.p.rapidapi.com/";
- const API_KEY= "0eaf85e90emsh909fe7c567d4f04p10bad1jsne26460938022";
+ const API_KEY= "YOUR_API_KEY";
 const API_HOST= "covid-19-data.p.rapidapi.com";
 
 
