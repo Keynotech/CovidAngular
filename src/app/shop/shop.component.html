@@ -3,30 +3,27 @@
 
 <div class="w-100 p-3 text-center" style="background-color: #eee;">
   <div class="background p-3 mb-2 bg-secondary text-white">
-    <h2>Lista produktów</h2>
+    <h2>COVID STATS PRODUCTS</h2>
     <div class="row">
-    <div *ngFor="let product of products">
-      <div class="col-sm text-center p-3">
-        <h3>
-          <a [title]="product.name + ' details'">
-            {{ product.name }}
-          </a>
-        </h3>
-        <p *ngIf="product.description">
-          Opis: {{ product.description }} <br>
-          <img src="{{product.img}}" height="150" width="150" lass="d-inline-block align-left" />
-        </p>
-        <button id="check-weather" class="btn btn-light" type="submit" (click)="share()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
-        </svg> Buy</button>
-
+      <div *ngFor="let product of products">
+        <div class="col-sm text-center p-3">
+          <h3>
+            <a [title]="product.name + ' details'">
+              {{ product.name }}
+            </a>
+          </h3>
+          <p *ngIf="product.description">
+            Description: {{ product.description }} <br>
+            <img src="{{product.img}}" height="150" width="150" lass="d-inline-block align-left" />
+          </p>
+          <button id="check-weather" class="btn btn-light" type="submit" (click)="share()"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+            </svg> Add to cart</button>
+        </div>
       </div>
-    </div>
-
-
-
-
-
     </div>
   </div>
 </div>

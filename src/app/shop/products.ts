@@ -11,23 +11,23 @@ export interface Product {
   export const products = [
     {
       id: 1,
-      name: 'Maseczka',
+      name: 'Mask',
       price: 799,
-      description: 'Maska antywirusowa przeznaczona do jednorazowego użytku stanowi higieniczną i bezpieczną alternatywę dla maseczek wielorazowych, które wykonane są z tkaniny.',
+      description: 'A single-use anti-virus mask is a hygienic and safe alternative to reusable masks made of fabric.',
       img: "https://i.imgur.com/BIc6zSl.png"
     },
     {
       id: 2,
-      name: 'Przyłbica',
+      name: 'Visor',
       price: 699,
-      description: 'Łączy w sobie zarówno wygodę maseczki jak i dzięki przeźroczystości spełnia funkcję przyłbicy.',
+      description: 'It combines both the convenience of the mask and, thanks to its transparency, it acts as a visor.',
       img: "https://i.imgur.com/tK4Z5ej.png"
     },
     {
       id: 3,
-      name: 'Rękawiczki lateksowe',
+      name: 'Latex gloves',
       price: 299,
-      description: 'Rękawiczki lateksowe są wykonane z wysokiej jakości kauczuku naturalnego. Doskonale łączą w sobie właściwości ochronne, takie jak barierowość i wytrzymałość. Cechują się wysoką elastycznością, dlatego dobrze dopasowują się do dłoni i gwarantują tym samym precyzję i swobodę ruchów.',
+      description: 'Latex gloves are made of high-quality natural rubber. They perfectly combine protective properties such as barrier and durability. They are characterized by high flexibility, therefore they fit well to the hand and thus guarantee precision and freedom of movement.',
       img: "https://i.imgur.com/ISOYeOy.png"
     }
   ];
